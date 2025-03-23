@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="cn">
+<style>
+    table{
+        border-collapse: collapse;
+    }
+    th, td {
+        padding: 8px;
+        text-align: left;
+        border-bottom: 1px sp;od #ddd;
+    }
+</style>
+<head>
+    <meta charset="UTF-8">
+    <title>顾客数据</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>姓名</th>
+            <th>电话</th>
+            <th>地址</th>
+            <th>QQ</th>
+        </tr>
+
+        {% for customer in customers %}
+            <tr>
+
+            {% for name, value in customer.items %}
+                <td>{{ value }}</td>
+            {% endfor %}
+
+            </tr>
+        {% endfor %}
+
+    </table>
+</body>
+</html>
